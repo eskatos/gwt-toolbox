@@ -1,6 +1,7 @@
 package org.codeartisans.gwt.toolbox.js.patterns.presenter;
 
-public interface Presenter {
+public interface Presenter
+{
 
     /**
      * Called then the presenter is initialised. This is called before any other
@@ -21,4 +22,5 @@ public interface Presenter {
      * @return The view.
      */
     WidgetView getView();
+
 }

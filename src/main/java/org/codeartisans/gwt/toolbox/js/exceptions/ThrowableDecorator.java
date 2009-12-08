@@ -9,6 +9,7 @@ public class ThrowableDecorator
         decorator.wrapped = th;
         return decorator;
     }
+
     private Throwable wrapped;
 
     public String getStackTrace()
@@ -17,8 +18,7 @@ public class ThrowableDecorator
         sw.append(">> Exception type: ").append(wrapped.getClass().getName()).append("\n");
         sw.append(">> Message: ").append(wrapped.getMessage()).append("\n");
         sw.append(">> Stack trace:\n");
-        for (StackTraceElement eachElem : wrapped.getStackTrace())
-        {
+        for (StackTraceElement eachElem : wrapped.getStackTrace()) {
             String className = eachElem.getClassName();
             String methodName = eachElem.getMethodName();
             String fileName = eachElem.getFileName();
@@ -27,4 +27,5 @@ public class ThrowableDecorator
         }
         return sw.toString();
     }
+
 }

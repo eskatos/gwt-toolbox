@@ -1,15 +1,20 @@
 package org.codeartisans.gwt.toolbox.js.utils;
 
-public final class StringUtils {
+public final class StringUtils
+{
 
-    private StringUtils() {
+    private StringUtils()
+    {
     }
 
-    public static String sayHello(String name) {
+    public static String sayHello(String name)
+    {
         return "Hello " + name + "!";
     }
 
-    public static boolean isEmpty(String s) {
+    public static boolean isEmpty(String s)
+    {
         return (s == null || s.length() == 0);
     }
+
 }

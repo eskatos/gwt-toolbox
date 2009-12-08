@@ -4,7 +4,8 @@ import com.google.gwt.event.shared.EventHandler;
 import com.google.gwt.event.shared.GwtEvent;
 import com.google.gwt.event.shared.HandlerRegistration;
 
-public interface EventBus {
+public interface EventBus
+{
 
     <H extends EventHandler> HandlerRegistration addHandler(GwtEvent.Type<H> type, H handler);
 
@@ -15,4 +16,5 @@ public interface EventBus {
     int getHandlerCount(GwtEvent.Type<?> type);
 
     boolean isEventHandled(GwtEvent.Type<?> e);
+
 }

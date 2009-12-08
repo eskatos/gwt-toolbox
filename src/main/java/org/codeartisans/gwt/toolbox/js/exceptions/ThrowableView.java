@@ -16,11 +16,12 @@ public final class ThrowableView extends Composite
     public ThrowableView(Throwable fault)
     {
         Label msg = new Label(fault.getMessage());
-        HTML stacktrace = new HTML("<pre>" +
-                ThrowableDecorator.decorate(fault).getStackTrace() +
-                "</pre>");
+        HTML stacktrace = new HTML("<pre>"
+                + ThrowableDecorator.decorate(fault).getStackTrace()
+                + "</pre>");
         div.add(msg);
         div.add(stacktrace);
         initWidget(div);
     }
+
 }

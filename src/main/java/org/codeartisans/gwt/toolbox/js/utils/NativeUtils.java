@@ -11,4 +11,5 @@ public final class NativeUtils
     }
 
     public static native void reloadWindow() /*-{ $wnd.location.reload(); }-*/;
+
 }
