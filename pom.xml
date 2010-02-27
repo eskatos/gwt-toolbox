@@ -9,7 +9,7 @@
     
     <version>0.1.0-SNAPSHOT</version>
 
-    <name>${artifactId}</name>
+    <name>${project.artifactId}</name>
     <url>http://codeartisans.org</url>
 
     <properties>
@@ -77,7 +77,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>gwt-maven-plugin</artifactId>
-                <version>1.1</version>
+                <version>1.2</version>
                 <executions>
                     <execution>
                         <id>commons-gwt.gwt</id>
@@ -109,4 +109,15 @@
         </dependency>
     </dependencies>
     
+    <distributionManagement>
+        <repository>
+            <id>codeartisans-public-releases</id>
+            <url>https://codebox.codeartisans.org/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>codeartisans-public-snapshots</id>
+            <url>https://codebox.codeartisans.org/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
 </project>
