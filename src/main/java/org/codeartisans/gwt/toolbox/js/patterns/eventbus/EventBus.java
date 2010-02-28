@@ -7,14 +7,14 @@ import com.google.gwt.event.shared.HandlerRegistration;
 public interface EventBus
 {
 
-    <H extends EventHandler> HandlerRegistration addHandler(GwtEvent.Type<H> type, H handler);
+    <H extends EventHandler> HandlerRegistration addHandler( GwtEvent.Type<H> type, H handler );
 
-    void fireEvent(GwtEvent<?> event);
+    void fireEvent( GwtEvent<?> event );
 
-    <H extends EventHandler> H getHandler(GwtEvent.Type<H> type, int index);
+    <H extends EventHandler> H getHandler( GwtEvent.Type<H> type, int index );
 
-    int getHandlerCount(GwtEvent.Type<?> type);
+    int getHandlerCount( GwtEvent.Type<?> type );
 
-    boolean isEventHandled(GwtEvent.Type<?> e);
+    boolean isEventHandled( GwtEvent.Type<?> e );
 
 }

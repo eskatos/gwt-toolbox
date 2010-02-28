@@ -8,20 +8,21 @@ import com.google.gwt.user.client.ui.Label;
 /**
  * @author Paul Merlin <p.merlin@nosphere.org>
  */
-public final class ThrowableView extends Composite
+public final class ThrowableView
+        extends Composite
 {
 
     private final FlowPanel div = new FlowPanel();
 
-    public ThrowableView(Throwable fault)
+    public ThrowableView( Throwable fault )
     {
-        Label msg = new Label(fault.getMessage());
-        HTML stacktrace = new HTML("<pre>"
-                + ThrowableDecorator.decorate(fault).getStackTrace()
-                + "</pre>");
-        div.add(msg);
-        div.add(stacktrace);
-        initWidget(div);
+        Label msg = new Label( fault.getMessage() );
+        HTML stacktrace = new HTML( "<pre>"
+                + ThrowableDecorator.decorate( fault ).getStackTrace()
+                + "</pre>" );
+        div.add( msg );
+        div.add( stacktrace );
+        initWidget( div );
     }
 
 }

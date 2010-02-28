@@ -5,7 +5,8 @@ import com.google.gwt.core.client.EntryPoint;
 /**
  * @author Paul Merlin <p.merlin@nosphere.org>
  */
-public final class GwtModule implements EntryPoint
+public final class GwtModule
+        implements EntryPoint
 {
 
     protected GwtModule()

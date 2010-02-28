@@ -11,7 +11,7 @@ public abstract class WidgetPresenter<V extends WidgetView>
     protected final EventBus eventBus;
     private List<HandlerRegistration> handlerRegistrations = new java.util.ArrayList<HandlerRegistration>();
 
-    public WidgetPresenter(V view, EventBus eventBus)
+    public WidgetPresenter( V view, EventBus eventBus )
     {
         this.view = view;
         this.eventBus = eventBus;
@@ -30,19 +30,19 @@ public abstract class WidgetPresenter<V extends WidgetView>
      */
     protected abstract void onUnbind();
 
-    public V getView()
+    public final V getView()
     {
         return view;
     }
 
-    public void bind()
+    public final void bind()
     {
         onBind();
     }
 
-    public void unbind()
+    public final void unbind()
     {
-        for (HandlerRegistration reg : handlerRegistrations) {
+        for ( HandlerRegistration reg : handlerRegistrations ) {
             reg.removeHandler();
         }
         handlerRegistrations.clear();
@@ -50,9 +50,9 @@ public abstract class WidgetPresenter<V extends WidgetView>
         onUnbind();
     }
 
-    protected void registerHandler(HandlerRegistration handlerRegistration)
+    protected final void registerHandler( HandlerRegistration handlerRegistration )
     {
-        handlerRegistrations.add(handlerRegistration);
+        handlerRegistrations.add( handlerRegistration );
     }
 
 }
