@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.codeartisans</groupId>
         <artifactId>codeartisans-parent</artifactId>
-        <version>1-SNAPSHOT</version>
+        <version>2</version>
     </parent>
 
     <groupId>org.codeartisans.gwt</groupId>
@@ -21,6 +21,10 @@
         <gwt.version>1.7.1</gwt.version>
         <gwt.module>org.codeartisans.gwt.Toolbox</gwt.module>
     </properties>
+
+    <scm>
+        <developerConnection>scm:git:ssh://gitosis@codebox.codeartisans.org/${project.artifactId}.git</developerConnection>
+    </scm>
 
     <build>
         <outputDirectory>war/WEB-INF/classes</outputDirectory>
