@@ -40,7 +40,7 @@
         <plugins>
             <plugin>
                 <artifactId>maven-clean-plugin</artifactId>
-                <version>2.3</version>
+                <version>2.4.1</version>
                 <configuration>
                     <filesets>
                         <fileset>
@@ -65,6 +65,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
+                <version>2.1</version>
                 <configuration>
                     <warSourceExcludes>.gwt-tmp/**</warSourceExcludes>
                     <webXml>war/WEB-INF/web.xml</webXml>
@@ -100,7 +101,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.7</version>
+            <version>4.8.1</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
